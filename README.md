@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-hudidit.github.io
+A simple blog engine using Node.js
 =================
 
 ### Github Pages + Node.js = super simple blog engine
@@ -43,10 +42,7 @@ With your beloved markdown.
 > git commit -m "first post using this simple blog engine"
 > git push
 ```
-An shining there are your lovely words.
+And shining there are your lovely words.
 =======
 simple-node-blog
 ================
-
-simple blog engine using Node.js
->>>>>>> e5ec93626d0e07e075685bc1d7543e47c28d9614
