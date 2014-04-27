@@ -1,19 +1,11 @@
 A simple blog engine using Node.js
 =================
 
-### Github Pages + Node.js = super simple blog engine
-
 ### Note
 
 This project is only a prototype for now. And I'm really having fun building it.
 
 # Requirements
-
-## Front end
-
-Clone this repo to your [Github Pages](http://pages.github.com/).
-
-## Back end
 
 1. Setup a Node.js server of your own.
 
