@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<title>超简单的博客</title>
+	<title>博客</title>
     <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
@@ -12,7 +12,16 @@
 		<div id="main">Loading...</div>
 		<div id="footer"><a href="http://pages.github.com/">Github Pages</a> &amp; <a href="http://nodejs.org/">Node.js</a> &amp; <a href="https://github.com/chjj/marked">marked</a>.</br>Compose with <a href="http://daringfireball.net/projects/markdown/">Markdown</a></div>
 	</div>
-    <script src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
-    <script src="./index.js"></script>
+    
+    <script src="./js/sea-modules/sea.js"></script>
+    <script>
+        seajs.config({
+            base:   './js/sea-modules/'
+            ,alias: {
+                'jquery':   'jquery.js'
+            }
+        });
+        seajs.use('./js/main');
+    </script>
 </body>
 </html>
