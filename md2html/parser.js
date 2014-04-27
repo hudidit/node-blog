@@ -45,6 +45,6 @@ http.createServer(function( req, res ){
 		});
 	}
 
-}).listen(8000);
+}).listen( config.port );
 
 
