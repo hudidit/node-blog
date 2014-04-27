@@ -15,9 +15,9 @@ This project is only a prototype for now. And I'm really having fun building it.
 
 `node path/to/md2html/parser.js`
 
-Personally I'm using [Forever](https://github.com/nodejitsu/forever).
+Personally I'm using [pm2](https://github.com/Unitech/pm2).
 
-`forever start path/to/md2html/parser.js`
+`pm2 start path/to/md2html/parser.js`
 
 ## Composing
 
