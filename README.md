@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 hudidit.github.io
 =================
 
@@ -43,3 +44,9 @@ With your beloved markdown.
 > git push
 ```
 An shining there are your lovely words.
+=======
+simple-node-blog
+================
+
+simple blog engine using Node.js
+>>>>>>> e5ec93626d0e07e075685bc1d7543e47c28d9614
