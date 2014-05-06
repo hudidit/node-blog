@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>博客</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="http://huyue-org.qiniudn.com/favicon.ico" />
+</head>
+<body>
+	<div id="wrapper">
+		<h1><a id="home" href="http://blog.guobaner.com/">超简单的博客</a></h1>
+		<div id="main">Loading...</div>
+        <div id="footer">Powered by <a href="https://github.com/hudidit/simple-node-blog">this</a></div>
+	</div>
+    
+    <script src="./js/sea-modules/sea.js"></script>
+    <script>
+        seajs.config({
+            base:   './js/sea-modules/'
+            ,alias: {
+                'jquery':   'jquery.js'
+            }
+        });
+        seajs.use('./js/main');
+    </script>
+</body>
+</html>
