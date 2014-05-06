@@ -18,7 +18,7 @@ define(function( require, exports, module ){
             home();
         });
 
-        $('#main').on('click',function(e){
+        $('#main').on('click','.post-name',function(e){
             e.preventDefault();
             var target = $(e.target);
             if(target.attr('href')){
