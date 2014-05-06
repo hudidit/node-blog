@@ -36,16 +36,27 @@ http.createServer(function( req, res ){
 				res.end( 'Unable to list posts.\n' + err );
 			}
 			resData = '<ul>';
+<<<<<<< HEAD
             var len = files.length;
             while(len--){
                 var filename = files[len];
 				resData += '<li><a href="'+ filename +'" class="post-name">'+ filename.replace(/-/g,' ').slice(0,filename.length-3) +'</a></li>';
             }
+=======
+			for(var i = 0,len = files.length; i<len; i++){
+				var filename = files[i];
+				resData += '<li><a href="'+ filename +'" class="post-name">'+ filename.replace(/-/g,' ').slice(0,filename.length-3) +'</a></li>';
+			}
+>>>>>>> 011777d0e7a48c6f62dc3fe203d6651c90476617
 			resData += '</ul>';
 			res.end(resData);
 		});
 	}
 
+<<<<<<< HEAD
 }).listen(config.port);
+=======
+}).listen( config.port );
+>>>>>>> 011777d0e7a48c6f62dc3fe203d6651c90476617
 
 

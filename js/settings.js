@@ -11,6 +11,11 @@ define(function(require,exports,module){
         ,port:  6031
         // site title
         ,title: 'huyue\'s blog'
+        url: 'http://localhost'
+        // port of node server
+        ,port:  8000
+        // site title
+        ,title: '疾风'
     };
     
     module.exports = settings;

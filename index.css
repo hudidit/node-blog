@@ -9,7 +9,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 body{
     color:  #555;
     font-family: "SimSun",georgia,helvetica,"Microsoft Yahei",verdana;
+<<<<<<< HEAD
 	font-size: 20px;
+=======
+	font-size: 24px;
+>>>>>>> 011777d0e7a48c6f62dc3fe203d6651c90476617
 	line-height: 2;
 }
 
@@ -38,9 +42,12 @@ h1{
 }
 
 @media all and ( max-width: 999px ){
+<<<<<<< HEAD
     body{
         font-size:  16px;
     }
+=======
+>>>>>>> 011777d0e7a48c6f62dc3fe203d6651c90476617
 	#wrapper{
 		width: 95%;
 	}
