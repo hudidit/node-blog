@@ -36,5 +36,3 @@ With your beloved markdown.
 ```
 And shining there are your lovely words.
 =======
-simple-node-blog
-================
