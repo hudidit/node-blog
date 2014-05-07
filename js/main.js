@@ -7,35 +7,38 @@ define(function( require, exports, module ){
     var $           = require('jquery'),
         settings    = require('./settings'),
         site        = require('./site'),
-        header      = require('./header');
+        header      = require('./header'),
+        history     = window.history;
     
     var main = $('#main');
 
     $(function(){
         
-        home();
+        hasQuery();
 
         $('#home').on('click',function(e){
             e.preventDefault();
-            home();
+            if(history.state){
+                history.back(1);
+            }
         });
 
         main.on('click','.post-name',function(e){
             e.preventDefault();
-            var target = $(e.target),
-                href = target.attr('href');
-            if( href ){
-                window.location.hash = href;
-            }
+            var href = $(e.target).attr('href'),
+                post = href.slice(0,href.length-3);
+            history.pushState({
+                state:  1
+                ,post:  post
+            },post,'?post='+post);
+            hasQuery()
         });
 
-        $(window).on('hashchange',function(e){
-            var hash = window.location.hash;
-            single( hash.slice(1,hash.length) );
-            console.log(hash.slice(1,hash.length));
-        });
+        $(window).on('popstate',function(){
+            console.log(history.state)
+            hasQuery()
+        })
 
-        
         function home(){
             $.get(
                 settings.url + ':' + settings.port
@@ -45,15 +48,31 @@ define(function( require, exports, module ){
             );
         }
 
-        function single( name ){
+        function single( post ){
             $.get(
-                settings.url + ':' + settings.port + '?post='+name
+                settings.url + ':' + settings.port + '?post='+post+'.md'
                 ,function(data){
                     main.html(data);
                 }
             );
         }
 
-    });
+        function queryObject(){
+            var query   = window.location.search.substring(1),
+                vars    = query.split('&'),
+                obj     = {};
+            for( var i=0,len=vars.length; i<len; i++){
+                var pair = vars[i].split('=');
+                obj[ pair[0] ] = pair[1];
+            }
+            return obj;
+        }
+
+        function hasQuery(){
+            var post = queryObject().post;
+            post ? single(post) : home();
+        }
+
+   });
 
 });
