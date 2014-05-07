@@ -35,6 +35,11 @@ http.createServer(function( req, res ){
 			if( err ){
 				res.end( 'Unable to list posts.\n' + err );
 			}
+
+            files.sort(function(a,b){
+                return fs.statSync(config.postsDir+a).mtime.getTime()-fs.statSync(config.postsDir+b).mtime.getTime();
+            })
+
 			resData = '<ul>';
             var len = files.length;
             while(len--){
