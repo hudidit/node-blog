@@ -9,6 +9,8 @@ define(function( require, exports, module ){
         site        = require('./site'),
         header      = require('./header');
     
+    var main = $('#main');
+
     $(function(){
         
         home();
@@ -18,15 +20,21 @@ define(function( require, exports, module ){
             home();
         });
 
-        $('#main').on('click','.post-name',function(e){
+        main.on('click','.post-name',function(e){
             e.preventDefault();
-            var target = $(e.target);
-            if(target.attr('href')){
-                single(target.attr('href'));
+            var target = $(e.target),
+                href = target.attr('href');
+            if( href ){
+                window.location.hash = href;
             }
         });
 
-        var main = $('#main');
+        $(window).on('hashchange',function(e){
+            var hash = window.location.hash;
+            single( hash.slice(1,hash.length) );
+            console.log(hash.slice(1,hash.length));
+        });
+
         
         function home(){
             $.get(
