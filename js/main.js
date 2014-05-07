@@ -17,8 +17,8 @@ define(function( require, exports, module ){
         hasQuery();
 
         $('#home').on('click',function(e){
-            e.preventDefault();
             if(history.state){
+                e.preventDefault();
                 history.back(1);
             }
         });
