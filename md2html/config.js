@@ -11,7 +11,7 @@ var config = {
     /*
         [string]    path of the directory in which you save your posts' markdown files. Could be absolute or relative.
     */
-    ,postsDir:   './posts/'
+    ,postsDir:   '../posts/'
 };
 
 module.exports = config;
