@@ -24,6 +24,10 @@ h1{
 	font-size: 28px;
 }
 
+p img{
+    max-width:  100%;
+}
+
 #wrapper{
 	width: 700px;
 	margin: auto;
