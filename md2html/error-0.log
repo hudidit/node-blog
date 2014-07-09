@@ -1,0 +1,8 @@
+TypeError: Cannot call method 'replace' of undefined
+Please report this to https://github.com/chjj/marked.
+  at Lexer.lex (/home/huyue/org/md2html/node_modules/marked/lib/marked.js:132:6)
+  at Function.Lexer.lex (/home/huyue/org/md2html/node_modules/marked/lib/marked.js:123:16)
+  at marked (/home/huyue/org/md2html/node_modules/marked/lib/marked.js:1187:31)
+  at /home/huyue/org/md2html/parser.js:28:12
+  at fs.js:207:20
+  at Object.oncomplete (fs.js:107:15)
