@@ -42,6 +42,10 @@ p img{
 	font-size:  20px;
 }
 
+#cnzz_stat_icon_4779214 {
+	display: none;
+}
+
 @media all and ( max-width: 999px ){
     body{
         font-size:  16px;
